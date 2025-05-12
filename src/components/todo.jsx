@@ -47,7 +47,6 @@ const Todo = () => {
 
   // Delete Products
   const deleteItem = (index) => {
-    console.log(index);
     const updatedItems = items.filter((curElem) => {
         return index !== curElem.id;
     });
