@@ -1,11 +1,14 @@
 import './App.css'
-import Todo from './components/todo'
+import SeriesCard from './components/seriesCard';
+import Todo from './components/todo';
+
 
 function App() {
 
   return (
     <>
-     <Todo/>
+     {/* <Todo/> */}
+     <SeriesCard/>
     </>
   )
 }
