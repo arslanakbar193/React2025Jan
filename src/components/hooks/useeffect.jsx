@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 const Useeffect = () => {
     useEffect (() => {} , []);
@@ -7,4 +7,4 @@ const Useeffect = () => {
   )
 }
 
-export default Useeffect
+export default Useeffect;
