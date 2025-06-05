@@ -1,9 +1,10 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t mt-10">
+    <footer className="bg-white    mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between">
         {/* Site Name */}
         <div className="text-xl font-semibold text-gray-800 mb-4 md:mb-0">
@@ -12,10 +13,10 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex space-x-6 mb-4 md:mb-0">
-          <a href="#" className="text-gray-600 hover:text-blue-600">Home</a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">Shop</a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">About</a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">Contact</a>
+          <NavLink to="/" className="text-gray-600 hover:text-blue-600">Home</NavLink>
+          <NavLink to="/about" className="text-gray-600 hover:text-blue-600">About</NavLink>
+          <NavLink to="/products" className="text-gray-600 hover:text-blue-600">Products</NavLink>
+          <NavLink to="/contact" className="text-gray-600 hover:text-blue-600">Contact</NavLink>
         </div>
 
         {/* Social Icons */}
