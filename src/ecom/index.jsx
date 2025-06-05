@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from './HeroSection';
 import Services from './Services';
 import Trusted from './Trusted';
+import FeatureProducts from './FeatureProducts';
 
 const ReactEcom = () => {
   const data = {
@@ -12,6 +13,7 @@ const ReactEcom = () => {
       <HeroSection mydata={data}/>
       <Services/>
       <Trusted/>
+      <FeatureProducts/>
     </div>
   )
 }
