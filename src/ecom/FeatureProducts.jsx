@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { AppContext } from './ProductContext';
 
+import Product from '../components/Product';
+
 const FeatureProducts = () => {
   const { isLoading, featureProducts } = useContext(AppContext);
 
@@ -19,22 +21,9 @@ const FeatureProducts = () => {
           Featured Products
         </h2>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {featureProducts.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="h-48 w-full object-cover mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
-              <p className="text-blue-600 font-medium text-md mt-2">
-                ₹ {product.price / 100}
-              </p>
-            </div>
-          ))}
+          {featureProducts.map((product) => {
+              return <Product key={product.id} {...product}/>
+          })}
         </div>
       </div>
     </section>

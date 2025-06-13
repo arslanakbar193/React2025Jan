@@ -14,6 +14,29 @@ const ProductReducer = (state,action) => {
             isError:true
         };
     }
+    if (action.type === "SET_SINGLELOADING"){
+            return {
+                ...state,
+                isSingleLoading:true,
+            };
+        }
+
+        if (action.type === "SET_SINGLEPRODUCT"){
+           return {
+                ...state,
+                isSingleLoading:false,
+                singleProduct:action.payload,
+            };
+        }
+
+        if (action.type === "SET_SINGLEERROR"){
+        return {
+            ...state,
+            isSingleLoading:false,
+            isError:true
+        };
+    }
+
     if (action.type === "SET_API_DATA"){
         const featureData = action.payload.filter((cur) => {
             return cur.featured === true;
